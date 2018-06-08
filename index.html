@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
@@ -29,6 +30,29 @@
         <button type="button" class="btn btn-raised btn-danger" data-toggle="snackbar" data-content="Notifikace byly nastaveny!" data-html-allowed="true" data-timeout="0">
           Aktivovat
         </button>
+    </div>
+
+    <div class="data-content">
+        <div class="card data-view" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-bus"></i> Autobus 317</h5>
+              <div class="data-bus">
+                <div class="data-bus-start">Odjezd: 15:40</div>
+                <div class="data-bus-start">Pravidelný příjezd: 16:18</div>
+                <div class="data-bus-start data-bus-late">Příjezd: 16:32 (zpoždění 15 minut)</div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card data-view" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-cloud"></i> Počasí na trase</h5>
+                <div class="data-bus">
+                  <div class="data-bus-start">Polojasno (v 16:43)</div>
+                  <div class="data-bus-start data-bus-late">Kolem 17:00 <strong>deštivo</strong></div>
+                </div>
+              </div>
+          </div>
     </div>
 
     <div class="footer">
