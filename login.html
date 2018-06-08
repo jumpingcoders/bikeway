@@ -7,28 +7,37 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Hello, world!</title>
+    <title>NotiMe!</title>
   </head>
   <body>
 
     <ul class="nav nav-tabs bg-dark">
-      <li class="nav-item">
-        <a class="nav-link active" href="index.html">Domů</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">O nás</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Přihlásit se</a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Domů</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">O nás</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="login.html">Přihlásit se</a>
+        </li>
     </ul>
 
-    <div class="content">
-        <h1>Vítejte na NotiMe</h1>
-        <p>Posíláme notifikace o vašem každodenním životě. Žádná aplikace, žádné e-maily - jen notifikace</p>
-        <button type="button" class="btn btn-raised btn-danger" data-toggle="snackbar" data-content="Notifikace byly nastaveny!" data-html-allowed="true" data-timeout="0">
-          Aktivovat
-        </button>
+    <div class="user-new">
+      <h2>Přihlaste</h2>
+      <p>Abychom mohli personalizovat notifikace pro Vás, potřebujeme, aby jste se u nás zaregistrovali. Pokud již máte účet, tak se stačí přihlásit.</p>
+      <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="bmd-label-floating">E-mailová adresa</label>
+            <input type="email" class="form-control" id="exampleInputEmail1">
+            <span class="bmd-help">Váš e-mail nebudeme používat na nic jiného, než k ověření Vaší identity.</span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="bmd-label-floating">Heslo</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-danger btn-raised">Odeslat</button>
+        </form>
     </div>
 
     <div class="footer">
