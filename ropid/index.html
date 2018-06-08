@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <input type="button" id="get-data" value="Zjisti zpoždění"/>
+    <div id="datahere">
+    </div>
+    <script>
+      $('#get-data').click(function () {
+        $.getJSON("testdata.json", function (data) {
+          console.log(data);
+          for(var i=0; i<data.tripUpdates.length; i++){
+            if(data.tripUpdates[i].routeName=="311"){
+              $('#datahere').append(data.tripUpdates[i].routeName);
+              $('#datahere').append(": ");
+              $('#datahere').append(data.tripUpdates[i].delay/60);
+              $('#datahere').append(" Minut<br />");
+
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
