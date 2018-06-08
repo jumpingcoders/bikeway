@@ -8,10 +8,12 @@
 
 .data-content {
   display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
 }
 
 .data-view {
-  margin: 25px;
+  margin: 10px;
 }
 
 .data-bus-late {
@@ -19,8 +21,6 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   margin: 15px;
 }
 
