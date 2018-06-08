@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>NotiMe!</title>
   </head>
   <body>
 
@@ -30,6 +30,16 @@
         <button type="button" class="btn btn-raised btn-danger" data-toggle="snackbar" data-content="Notifikace byly nastaveny!" data-html-allowed="true" data-timeout="0">
           Aktivovat
         </button>
+        <div class="form-group data-select">
+            <label for="exampleSelect1" class="bmd-label-floating">Pokud chcete, můžete zadat vaší cílovou zastávku</label>
+            <select class="form-control" id="exampleSelect1">
+              <option>Kladno</option>
+              <option>Kladno,,město</option>
+              <option>Kladno,vlak.nádraží</option>
+              <option>Dobřovovice</option>
+              <option>Kladno,,náměstí</option>
+            </select>
+        </div>
     </div>
 
     <div class="data-content">
@@ -38,9 +48,9 @@
           <div class="card-body">
             <h5 class="card-title"><i class="fas fa-bus"></i> Autobus 317</h5>
             <div class="data-bus">
-              <div class="data-bus-start">Odjezd z <strong>Praha</strong>: 15:40</div>
-              <div class="data-bus-start">Pravidelný příjezd do <strong>Kladno</strong>: 16:18</div>
-              <div class="data-bus-start data-bus-late">Příjezd: 16:32 (zpoždění 15 minut)</div>
+              <div class="data-bus-start">Další zastávka <strong>Kladno</strong>: 15:40</div>
+              <div class="data-bus-start">Zpoždění: 15 minut</div>
+              <div class="data-bus-start data-bus-late">Příjezd do <strong>Kladno</strong> 16:32</div>
             </div>
           </div>
         </div>
