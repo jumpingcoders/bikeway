@@ -1,4 +1,18 @@
-body {
-  margin: 5px;
+.content {
+  margin: 25px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: 15px;
+}
+
+a {
+  color: #bf0c1d;
+}
+
+a:hover {
+  color: #770712;
 }
 /*# sourceMappingURL=style.css.map */

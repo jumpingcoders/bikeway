@@ -10,12 +10,36 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <button type="button" class="btn btn-raised btn-primary">Primary</button>
+
+    <ul class="nav nav-tabs bg-dark">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Domů</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">O nás</a>
+      </li>
+    </ul>
+
+    <div class="content">
+        <h1>Vítejte na NotiMe</h1>
+        <p>Posíláme notifikace o vašem každodenním životě. Žádná aplikace, žádné e-maily - jen notifikace</p>
+        <button type="button" class="btn btn-raised btn-danger" data-toggle="snackbar" data-content="Notifikace byly nastaveny!" data-html-allowed="true" data-timeout="0">
+          Aktivovat
+        </button>
+    </div>
+
+    <div class="footer">
+      Projekt byl vytvořen v rámci hackathonu Prague Hack Fest 2018 | <a href="http://github.com/jumpingcoders/notime">GitHub repozitář</a>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>
+    $('body').bootstrapMaterialDesign();
+</script> 
   </body>
 </html>
