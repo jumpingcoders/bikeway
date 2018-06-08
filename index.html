@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
@@ -13,19 +14,59 @@
 
     <ul class="nav nav-tabs bg-dark">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Domů</a>
+        <a class="nav-link active" href="index.html">Domů</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">O nás</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Přihlásit se</a>
+      </li>
     </ul>
 
     <div class="content">
-        <h1>Vítejte na NotiMe</h1>
-        <p>Posíláme notifikace o vašem každodenním životě. Žádná aplikace, žádné e-maily - jen notifikace</p>
+        <h1>NotiMe</h1>
+        <p>Posíláme notifikace o vaší trase. Žádná aplikace, žádné e-maily - jen notifikace</p>
         <button type="button" class="btn btn-raised btn-danger" data-toggle="snackbar" data-content="Notifikace byly nastaveny!" data-html-allowed="true" data-timeout="0">
           Aktivovat
         </button>
+    </div>
+
+    <div class="data-content">
+
+        <div class="card data-view" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-bus"></i> Autobus 317</h5>
+            <div class="data-bus">
+              <div class="data-bus-start">Odjezd z <strong>Praha</strong>: 15:40</div>
+              <div class="data-bus-start">Pravidelný příjezd do <strong>Kladno</strong>: 16:18</div>
+              <div class="data-bus-start data-bus-late">Příjezd: 16:32 (zpoždění 15 minut)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card data-view" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Navazující spoje v místě <strong>Kladno</strong></h5>
+              <div class="data-bus">
+                <div class="data-bus-start"><i class="fas fa-bus"></i> Autobus 397 - odjezd: <strong>15:20</strong></div>
+                <div class="data-bus-start"><i class="fas fa-bus"></i> Autobus 397 - odjezd: <strong>15:25</strong></div>
+                <div class="data-bus-start"><i class="fas fa-subway"></i> Tramvaj 14 - odjezd: <strong>16:20</strong></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card data-view" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-cloud"></i> Počasí na trase</h5>
+                <div class="data-bus">
+                  <div class="data-bus-start">Polojasno 27&#8451;</div>
+                  <div class="data-bus-start data-bus-late">Pravděpodobnost srážek <strong>80%</strong></div>
+                  <div class="data-bus-start">UV index: 6</div>
+                  <div class="data-bus-start">Vítr: 11 km/h</div>
+                </div>
+              </div>
+          </div>
     </div>
 
     <div class="footer">

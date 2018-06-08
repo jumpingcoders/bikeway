@@ -2,9 +2,25 @@
   margin: 25px;
 }
 
+.user-new {
+  margin: 25px;
+}
+
+.data-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+}
+
+.data-view {
+  margin: 10px;
+}
+
+.data-bus-late {
+  color: #bf0c1d;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
   margin: 15px;
 }
 
@@ -14,5 +30,11 @@ a {
 
 a:hover {
   color: #770712;
+}
+
+@media (max-width: 900px) {
+  .data-view {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
