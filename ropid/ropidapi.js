@@ -69,28 +69,35 @@ function getNextStop(tripId){
   });
 }
 
-function getNextStops(tripId){
+function getNextStops(tripId, callback){
   getIndex(tripId, function(index){
     console.log("ahoj");
     $.getJSON("testdata.json", function (busdata) {
     $.get("jizdnirad/stop_times.csv", function (data) {
+      var nextStopIds=new array();
       var stops = data.split("\n");
       for(var i=0; i<stops.length; i++){
           var params = stops[i].split(",");
-          if(params[0]==tripId){
-            if(params[3]==busdata.tripUpdates[index].measuredStopId){
-              var nextStopId=stops[i+1].split(",")[3]; //musí se zarazit na konečné zastávce a nepřetéct
-              console.log(nextStopId);
+          if(params[0]==tripId && params[3]==busdata.tripUpdates[index].measuredStopId){
+            var j = 0;
+            while(stops[i+j].split(",")[0]==tripId){
+              tripIds+=stops[i+j].split(",")[3];
+              j++;
+            }
+              var nextStopIds+=stops[i+1].split(",")[3]; //musí se zarazit na konečné zastávce a nepřetéct
+              console.log(nextStopIds);
             }
           }
       }
       $.get("jizdnirad/stops.csv", function (data) {
         var stops=data.split("\n");
+        var busNextStops=new array();
         for (var i=0; i<stops.length; i++){
-          if(stops[i].split(",")[0]==nextStopId){
-            $("#bus_next_stop").html(stops[i].split(",")[1].replace('"','').replace('"',''));
+          if(nextStopIds.includes(stops[i].split(",")[0])){
+            busNextStops+=stops[i].split(",")[1].replace('"','').replace('"','');
           }
         }
+        callback(busNextStops);
       });
     });
     });
