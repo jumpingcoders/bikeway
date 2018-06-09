@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <title>NotiMe!</title>
-    <script src="ropid/ropidapi.js">var id="165_65_180430"</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ropid/ropidapi.js"></script>
+    <script>var id="165_65_180430"</script>
   </head>
   <body>
 
@@ -44,10 +46,10 @@
 
         <div class="card data-view" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-bus"></i> Autobus <script>getBusNum(id);</script></h5>
+            <h5 class="card-title"><i class="fas fa-bus"></i> Autobus <script>document.write(getBusNum(id));</script></h5>
             <div class="data-bus">
-              <div class="data-bus-start">Další zastávka <strong><script>getNextStop(id);</script></strong>: 15:40</div>
-              <div class="data-bus-start">Zpoždění: <script>getDelay(id);</script> minut</div>
+              <div class="data-bus-start">Další zastávka <strong><script>document.write(getNextStop(id));</script></strong>: 15:40</div>
+              <div class="data-bus-start">Zpoždění: <script>document.write(getDelay(id));</script> minut</div>
               <div class="data-bus-start data-bus-late">Příjezd do <strong>Kladno</strong> 16:32</div>
             </div>
           </div>
@@ -93,7 +95,6 @@
       Projekt byl vytvořen v rámci hackathonu Prague Hack Fest 2018 | <a href="http://github.com/jumpingcoders/notime">GitHub repozitář</a>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
