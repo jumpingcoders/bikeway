@@ -13,11 +13,11 @@
         $.getJSON("testdata.json", function (data) {
           console.log(data);
           for(var i=0; i<data.tripUpdates.length; i++){
-            if(data.tripUpdates[i].routeName=="311"){
+            if(data.tripUpdates[i].routeName=="165"){
               $('#datahere').append(data.tripUpdates[i].routeName);
               $('#datahere').append(": ");
-              $('#datahere').append(data.tripUpdates[i].delay/60);
-              $('#datahere').append(" Minut<br />");
+              $('#datahere').append(data.tripUpdates[i].tripId);
+              $('#datahere').append("<br />");
 
             }
           }

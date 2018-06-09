@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <title>NotiMe!</title>
+    <script src="ropid/ropidapi.js">var id="165_65_180430"</script>
   </head>
   <body>
 
@@ -43,10 +44,10 @@
 
         <div class="card data-view" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-bus"></i> Autobus 317</h5>
+            <h5 class="card-title"><i class="fas fa-bus"></i> Autobus <script>getBusNum(id);</script></h5>
             <div class="data-bus">
-              <div class="data-bus-start">Další zastávka <strong>Kladno</strong>: 15:40</div>
-              <div class="data-bus-start">Zpoždění: 15 minut</div>
+              <div class="data-bus-start">Další zastávka <strong><script>getNextStop(id);</script></strong>: 15:40</div>
+              <div class="data-bus-start">Zpoždění: <script>getDelay(id);</script> minut</div>
               <div class="data-bus-start data-bus-late">Příjezd do <strong>Kladno</strong> 16:32</div>
             </div>
           </div>
@@ -74,7 +75,7 @@
               </div>
             </div>
           </div>
-      
+
           <div class="card data-view" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title"><i class="fas fa-sun"></i> Počasí na trase</h5>
