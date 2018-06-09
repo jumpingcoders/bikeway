@@ -19,9 +19,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">O nás</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Přihlásit se</a>
-      </li>
     </ul>
 
     <div class="content">
@@ -29,7 +26,7 @@
         <p>Posíláme notifikace o vaší trase. Žádná aplikace, žádné e-maily - jen notifikace</p>
         <div class="form-group data-select">
             <label for="exampleSelect1" class="bmd-label-floating">Vyberte cílovou stanici</label>
-            <select class="form-control" id="exampleSelect1">
+            <select class="form-control" id="exampleSelect1" onchange="place(value);">
               <option>Kladno</option>
               <option>Kladno,,město</option>
               <option>Kladno,vlak.nádraží</option>
@@ -45,16 +42,16 @@
           <div class="card-body">
             <h5 class="card-title"><i class="fas fa-bus"></i> Autobus 317</h5>
             <div class="data-bus">
-              <div class="data-bus-start">Další zastávka <strong>Kladno</strong>: 15:40</div>
+              <div class="data-bus-start">Další zastávka <strong class="trip_place">Kladno</strong>: 15:40</div>
               <div class="data-bus-start">Zpoždění: 15 minut</div>
-              <div class="data-bus-start data-bus-late">Příjezd do <strong>Kladno</strong> 16:32</div>
+              <div class="data-bus-start data-bus-late">Příjezd do <strong class="trip_place">Kladno</strong> 16:32</div>
             </div>
           </div>
         </div>
 
         <div class="card data-view" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Navazující spoje v místě <strong>Kladno</strong></h5>
+              <h5 class="card-title">Spoje v místě <strong class="trip_place">Kladno</strong></h5>
               <div class="data-bus">
                 <div class="data-bus-start"><i class="fas fa-bus"></i> Autobus 397 - odjezd: <strong>15:20</strong></div>
                 <div class="data-bus-start"><i class="fas fa-bus"></i> Autobus 397 - odjezd: <strong>15:25</strong></div>
