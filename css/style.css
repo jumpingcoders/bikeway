@@ -3,6 +3,16 @@
   font-size: 18px;
 }
 
+.title {
+  color: #fff;
+  padding: 15px;
+}
+
+ul {
+  box-shadow: gray 2px 3px 8px;
+  font-family: Microsoft Yahei Light;
+}
+
 .user-new {
   margin: 25px;
 }
