@@ -25,6 +25,10 @@
   width: 90%;
 }
 
+.card {
+  font-size: 18px;
+}
+
 .footer {
   margin: 15px;
 }
