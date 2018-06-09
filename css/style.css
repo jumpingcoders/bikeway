@@ -21,7 +21,7 @@
 }
 
 .data-select {
-  width: 80%;
+  width: 90%;
 }
 
 .footer {
@@ -39,6 +39,10 @@ a:hover {
 @media (max-width: 900px) {
   .data-view {
     width: 100%;
+  }
+  .data-select {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

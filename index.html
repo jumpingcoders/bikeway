@@ -31,7 +31,7 @@
           Aktivovat
         </button>
         <div class="form-group data-select">
-            <label for="exampleSelect1" class="bmd-label-floating">Pokud chcete, můžete zadat vaší cílovou zastávku</label>
+            <label for="exampleSelect1" class="bmd-label-floating">Vyberte cílovou stanici</label>
             <select class="form-control" id="exampleSelect1">
               <option>Kladno</option>
               <option>Kladno,,město</option>
@@ -63,12 +63,24 @@
                 <div class="data-bus-start"><i class="fas fa-bus"></i> Autobus 397 - odjezd: <strong>15:25</strong></div>
                 <div class="data-bus-start"><i class="fas fa-subway"></i> Tramvaj 14 - odjezd: <strong>16:20</strong></div>
               </div>
+              <hr>
+              <div class="data">
+                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Půjčovna kol v okolí">
+                  <i class="fas fa-bicycle fa-2x"></i>
+                </button>
+                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="WiFi na zastávce">
+                    <i class="fas fa-wifi fa-2x"></i>
+                </button>
+                <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Přestup na vlakové spoje">
+                    <i class="fas fa-train fa-2x"></i>
+                </button>
+              </div>
             </div>
           </div>
       
           <div class="card data-view" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title"><i class="fas fa-cloud"></i> Počasí na trase</h5>
+                <h5 class="card-title"><i class="fas fa-sun"></i> Počasí na trase</h5>
                 <div class="data-bus">
                   <div class="data-bus-start">Polojasno 27&#8451;</div>
                   <div class="data-bus-start data-bus-late">Pravděpodobnost srážek <strong>80%</strong></div>
@@ -89,8 +101,6 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script>
-    $('body').bootstrapMaterialDesign();
-</script> 
+    <script src="js/data-toogle.js"></script>
   </body>
 </html>
