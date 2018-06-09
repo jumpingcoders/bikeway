@@ -1,3 +1,5 @@
+var id="165_65_180430";
+
 function getDelay(tripId){
   $.getJSON("testdata.json", function (data) {
     for(var i=0; i<data.tripUpdates.length; i++){
@@ -7,6 +9,8 @@ function getDelay(tripId){
     }
   });
 }
+
+getDelay(id);
 
 function getIndex(tripId){
   $.getJSON("testdata.json", function (data) {
@@ -18,14 +22,17 @@ function getIndex(tripId){
 });
 }
 
+getBusNum(id);
+
 function getBusNum(tripId){
   $.getJSON("testdata.json", function (data) {
   for(var i=0; i<data.tripUpdates.length; i++){
     if(data.tripUpdates[i].tripId==tripId){
-      var vystup = data.tripUpdates[i].routeName;
+      console.log(data.tripUpdates[i].routeName);
+      //return data.tripUpdates[i].routeName;
+      $("#bus_id").html(data.tripUpdates[i].routeName);
     }
   }
-  return vystup;
 });
 }
 

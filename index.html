@@ -11,7 +11,6 @@
     <title>NotiMe!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="ropid/ropidapi.js"></script>
-    <script>var id="165_65_180430"</script>
   </head>
   <body>
 
@@ -46,10 +45,10 @@
 
         <div class="card data-view" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-bus"></i> Autobus <script>document.write(getBusNum(id));</script></h5>
+            <h5 class="card-title" id="result"><i class="fas fa-bus"></i> Autobus <span id="bus_id"></span></h5>
             <div class="data-bus">
-              <div class="data-bus-start">Další zastávka <strong><script>document.write(getNextStop(id));</script></strong>: 15:40</div>
-              <div class="data-bus-start">Zpoždění: <script>document.write(getDelay(id));</script> minut</div>
+              <div class="data-bus-start">Další zastávka <strong><script>getNextStop("165_65_180430");</script></strong>: 15:40</div>
+              <div class="data-bus-start">Zpoždění: <span id="bus_delay"></span> minut</div>
               <div class="data-bus-start data-bus-late">Příjezd do <strong>Kladno</strong> 16:32</div>
             </div>
           </div>
